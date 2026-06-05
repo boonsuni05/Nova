@@ -1,0 +1,80 @@
+#!/usr/bin/env python3
+"""Nova Linux client — sends commands to the Nova Android assistant over WebSocket."""
+
+import asyncio
+import json
+import re
+import sys
+import uuid
+from pathlib import Path
+
+try:
+    import tomllib
+except ModuleNotFoundError:
+    import tomli as tomllib  # type: ignore  # Python < 3.11 fallback
+
+import websockets
+
+CONFIG = Path(__file__).parent / "config.toml"
+
+TIMEOUT = 5  # seconds
+
+
+def load_config() -> dict:
+    with open(CONFIG, "rb") as f:
+        return tomllib.load(f)
+
+
+def parse(text: str) -> dict:
+    t = text.strip().lower()
+
+    m = re.fullmatch(r"set volume to (\d+)", t)
+    if m:
+        level = int(m.group(1))
+        if not 0 <= level <= 100:
+            raise SystemExit(f"Error: volume must be 0–100, got {level}")
+        return {"action": "set_volume", "params": {"level": level}}
+
+    m = re.fullmatch(r"get volume", t)
+    if m:
+        return {"action": "get_volume", "params": {}}
+
+    raise SystemExit(
+        f"Unrecognised command: {text!r}\n"
+        "Supported commands:\n"
+        "  nova \"set volume to <0-100>\"\n"
+        "  nova \"get volume\""
+    )
+
+
+async def run(host: str, port: int, command: dict) -> None:
+    uri = f"ws://{host}:{port}"
+    payload = {"id": str(uuid.uuid4()), **command}
+    try:
+        async with websockets.connect(uri, open_timeout=TIMEOUT) as ws:
+            await ws.send(json.dumps(payload))
+            raw = await asyncio.wait_for(ws.recv(), timeout=TIMEOUT)
+        data = json.loads(raw)
+        print(data.get("message", raw))
+        if data.get("status") == "error":
+            sys.exit(1)
+    except (OSError, websockets.exceptions.WebSocketException) as e:
+        raise SystemExit(f"Connection failed ({uri}): {e}")
+    except asyncio.TimeoutError:
+        raise SystemExit(f"Timed out waiting for response from {uri}")
+
+
+def main() -> None:
+    if len(sys.argv) < 2:
+        raise SystemExit('Usage: nova "<command>"')
+
+    cfg = load_config()
+    host = cfg["phone"]["host"]
+    port = int(cfg["phone"].get("port", 8765))
+    text = " ".join(sys.argv[1:])
+    command = parse(text)
+    asyncio.run(run(host, port, command))
+
+
+if __name__ == "__main__":
+    main()

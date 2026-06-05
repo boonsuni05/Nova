@@ -1,0 +1,17 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color nova_primary
+color nova_primary_dark
+color nova_secondary
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id btnToggle
+id tvAddress
+id tvStatus
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Theme.Nova

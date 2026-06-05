@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="nova_primary">#6200EE</color>
+    <color name="nova_primary_dark">#3700B3</color>
+    <color name="nova_secondary">#03DAC5</color>
+    <color name="white">#FFFFFF</color>
+    <string name="app_name">Nova</string>
+    <style name="Theme.Nova" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/nova_primary</item>
+        <item name="colorSecondary">@color/nova_secondary</item>
+    </style>
+</resources>
