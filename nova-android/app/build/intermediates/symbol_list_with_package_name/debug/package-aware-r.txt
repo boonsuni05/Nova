@@ -3082,6 +3082,7 @@ id beginning
 id blocking
 id bottom
 id bounce
+id btnMic
 id btnToggle
 id buttonPanel
 id cancel_button
@@ -3429,6 +3430,7 @@ id transition_transform
 id triangle
 id tvAddress
 id tvStatus
+id tvTranscript
 id unchecked
 id uniform
 id unlabeled

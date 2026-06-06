@@ -7,9 +7,11 @@ color nova_secondary
 color white
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+id btnMic
 id btnToggle
 id tvAddress
 id tvStatus
+id tvTranscript
 layout activity_main
 mipmap ic_launcher
 mipmap ic_launcher_round

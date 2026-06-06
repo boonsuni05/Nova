@@ -39,11 +39,56 @@ def parse(text: str) -> dict:
     if m:
         return {"action": "get_volume", "params": {}}
 
+    m = re.fullmatch(r"get battery", t)
+    if m:
+        return {"action": "get_battery", "params": {}}
+
+    m = re.fullmatch(r"set brightness to (\d+)", t)
+    if m:
+        level = int(m.group(1))
+        if not 0 <= level <= 100:
+            raise SystemExit(f"Error: brightness must be 0–100, got {level}")
+        return {"action": "set_brightness", "params": {"level": level}}
+
+    m = re.fullmatch(r"get brightness", t)
+    if m:
+        return {"action": "get_brightness", "params": {}}
+
+    m = re.fullmatch(r"flashlight (on|off)", t)
+    if m:
+        return {"action": "set_flashlight", "params": {"on": m.group(1) == "on"}}
+
+    if t == "status":
+        return {"action": "get_status", "params": {}}
+
+    if t == "play":
+        return {"action": "media_play", "params": {}}
+
+    if t == "pause":
+        return {"action": "media_pause", "params": {}}
+
+    if t == "next":
+        return {"action": "media_next", "params": {}}
+
+    if t == "previous":
+        return {"action": "media_previous", "params": {}}
+
+    m = re.fullmatch(r"open (.+)", t)
+    if m:
+        return {"action": "open_app", "params": {"query": m.group(1)}}
+
     raise SystemExit(
         f"Unrecognised command: {text!r}\n"
         "Supported commands:\n"
         "  nova \"set volume to <0-100>\"\n"
-        "  nova \"get volume\""
+        "  nova \"get volume\"\n"
+        "  nova \"get battery\"\n"
+        "  nova \"set brightness to <0-100>\"\n"
+        "  nova \"get brightness\"\n"
+        "  nova \"flashlight on|off\"\n"
+        "  nova \"play|pause|next|previous\"\n"
+        "  nova \"open <app name>\"\n"
+        "  nova \"status\""
     )
 
 

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:2:1-36:12
-INJECTED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:2:1-36:12
+ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:2:1-41:12
+INJECTED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:2:1-41:12
 MERGED from [com.google.android.material:material:1.11.0] /home/nandhu/.gradle/caches/transforms-3/c006c7e4abea24f449d8c80c9e056f58/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /home/nandhu/.gradle/caches/transforms-3/63339f8067fe63813443ca0691770bd0/transformed/jetified-appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/nandhu/.gradle/caches/transforms-3/8aefc306e4f2131e366302b78cf98c23/transformed/constraintlayout-2.0.1/AndroidManifest.xml:2:1-11:12
@@ -81,9 +81,29 @@ uses-permission#android.permission.POST_NOTIFICATIONS
 ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:10:5-77
 	android:name
 		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:10:22-74
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:11:5-73
+	android:name
+		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:11:22-70
+uses-permission#android.permission.FLASHLIGHT
+ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:12:5-69
+	android:name
+		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:12:22-66
+uses-permission#android.permission.QUERY_ALL_PACKAGES
+ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:13:5-77
+	android:name
+		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:13:22-74
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:14:5-78
+	android:name
+		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:14:22-75
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:15:5-71
+	android:name
+		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:15:22-68
 application
-ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:12:5-34:19
-INJECTED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:12:5-34:19
+ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:17:5-39:19
+INJECTED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:17:5-39:19
 MERGED from [com.google.android.material:material:1.11.0] /home/nandhu/.gradle/caches/transforms-3/c006c7e4abea24f449d8c80c9e056f58/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] /home/nandhu/.gradle/caches/transforms-3/c006c7e4abea24f449d8c80c9e056f58/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.1] /home/nandhu/.gradle/caches/transforms-3/8aefc306e4f2131e366302b78cf98c23/transformed/constraintlayout-2.0.1/AndroidManifest.xml:9:5-20
@@ -105,41 +125,41 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] /home/nandhu/.gradle/caches
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.12.0] /home/nandhu/.gradle/caches/transforms-3/01be542a8a7642ecba403b94caa2bdf6/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:17:9-35
+		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:22:9-35
 	android:label
-		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:15:9-41
+		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:20:9-41
 	android:roundIcon
-		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:16:9-54
+		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:21:9-54
 	android:icon
-		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:14:9-43
+		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:19:9-43
 	android:allowBackup
-		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:13:9-36
+		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:18:9-36
 	android:theme
-		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:18:9-42
+		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:23:9-42
 activity#com.nova.assistant.MainActivity
-ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:20:9-27:20
+ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:25:9-32:20
 	android:exported
-		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:22:13-36
+		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:27:13-36
 	android:name
-		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:21:13-41
+		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:26:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:23:13-26:29
+ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:28:13-31:29
 action#android.intent.action.MAIN
-ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:24:17-69
+ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:29:17-69
 	android:name
-		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:24:25-66
+		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:29:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:25:17-77
+ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:25:27-74
+		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:30:27-74
 service#com.nova.assistant.service.NovaForegroundService
-ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:29:9-32:40
+ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:34:9-37:40
 	android:exported
-		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:32:13-37
+		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:37:13-37
 	android:foregroundServiceType
-		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:31:13-53
+		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:36:13-53
 	android:name
-		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:30:13-58
+		ADDED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml:35:13-58
 uses-sdk
 INJECTED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/nandhu/Nova/nova-android/app/src/main/AndroidManifest.xml
